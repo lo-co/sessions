@@ -33,13 +33,11 @@
 
 using namespace std;
 
-/**
- * This is the default data structure for opening a session.  The base contains
- * only a single property - ``ID`` - used to identify the session.
- */
-
 namespace session {
-
+    /**
+     * This is the default data structure for opening a session.  The base contains
+     * only a single property - ``ID`` - used to identify the session.
+     */
     struct sData {
         string ID;
     };
