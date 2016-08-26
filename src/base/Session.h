@@ -69,7 +69,7 @@ namespace session {
          *  This decrements the number of open connections (``nopen``) and 
          *  calls the destructor when that number reaches 0.  
          */
-        int close();
+        void close();
 
         /** @brief Increments the counter on the session connections (``nopen``). */
         inline void increment_nopen() {

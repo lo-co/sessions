@@ -24,8 +24,7 @@ namespace session {
     // MAGIC!! Only runs once?
     map<string, Session *> Session::sessions(ts);
 
-    Session::Session(sData initData) {
-        this->ID = initData.ID;
+    Session::Session(sData initData):ID(initData.ID) {
 
         Session::sessions.insert(pair<string, Session *>(initData.ID, this));
 
@@ -36,7 +35,7 @@ namespace session {
     /* This is the public facing method that will call the destructor which 
      * will clean everything up properly (i.e. close connections).
      */
-    int Session::close() {
+    void Session::close() {
 
         /* If this is the last reference to the session, remove it from the 
          * list of sessions and destroy it.
