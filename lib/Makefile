@@ -6,12 +6,17 @@ LFLAGS = -shared
 #	$(CC) 
 
 
+
+
 session.so: session.o
 	${CC} -o $@ session.o ${LFLAGS}
 
 
 session.o: 
 	$(CC) -c ${CFLAGS} ../src/base/Session.cpp
-
+	mv Session.o session.o
+	
+file_session.o: session.o
+	$(CC) -c ${CFLAGS} ../src/file/fileSession.cpp session.o
 clean:
 	rm -rf *.o *.so *.a 
