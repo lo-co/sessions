@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   fileSession.cpp
  * Author: mrichardson
@@ -15,11 +9,11 @@
 namespace session {
 
     fileSession::fileSession(fileData fdata) : Session(fdata) {
-        fstream.open(fdata.main_path);
+        std::fstream.open(fdata.main_path);
     }
 
     fileSession::~fileSession() {
-        fstream.close();
+        std::fstream.close();
         
     }
 }
