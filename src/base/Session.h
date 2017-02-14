@@ -61,6 +61,8 @@ namespace session {
         inline string get_id() {
             return this->ID;
         }
+        
+        Session();
 
         Session(sData initData);
 

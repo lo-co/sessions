@@ -12,14 +12,32 @@
  */
 
 #include "logSession.h"
+#include <time.h>
 
 
 namespace session {
 
-    logSession::logSession() {
+    logSession::logSession(fileData fdata) : fileSession(fdata) {
     }
-
-    logSession::logSession(const logSession& orig) {
+    
+    fs::path logSession::generate_file_name(){
+        time_t rawtime;
+        struct tm* timeinfo;
+        char new_file[80];
+        
+        time(&rawtime);
+        timeinfo = localtime(&rawtime);
+        
+        strftime(new_file, 80, "%Y%m%d_%H%M%S.log", timeinfo);
+        
+        return (fs::path)new_file;
+        
+    }
+    
+    void logSession::log_error(string err){
+        
+        
+        (*fileRef)<< err;
     }
 
     logSession::~logSession() {

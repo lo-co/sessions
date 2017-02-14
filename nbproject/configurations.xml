@@ -16,6 +16,9 @@
           <in>SerialSession.cpp</in>
         </df>
       </df>
+      <df name="test">
+        <in>test_main.cpp</in>
+      </df>
     </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -69,6 +72,8 @@
       <item path="src/log/logSession.cpp" ex="false" tool="1" flavor2="4">
       </item>
       <item path="src/serial/SerialSession.cpp" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="test/test_main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

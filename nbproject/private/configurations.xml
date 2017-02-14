@@ -22,6 +22,9 @@
           <in>SerialSession.h</in>
         </df>
       </df>
+      <df name="test">
+        <in>test_main.cpp</in>
+      </df>
     </df>
   </logicalFolder>
   <projectmakefile></projectmakefile>

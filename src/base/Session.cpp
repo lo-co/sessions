@@ -17,7 +17,7 @@ namespace session {
 
     // MAGIC!! Only runs once?
     map<string, Session *> Session::sessions(ts);
-
+    Session::Session(){};
     Session::Session(sData initData):ID(initData.ID) {
 
         Session::sessions.insert(pair<string, Session *>(initData.ID, this));
