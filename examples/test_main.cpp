@@ -9,6 +9,13 @@
  * Author: mrichardson
  *
  * Created on February 14, 2017, 4:35 PM
+ * 
+ * REMEMBER WHEN LINKING THAT THE LIBRARY SESSIONS.SO MUST BE ADDED TO THE PATH
+ * VIA 
+ * ```
+ * export LD_LIBRARY_PATH=.
+ * ```
+ * or by adding it to the permanent path through a symbolic link.
  */
 
 #include <cstdlib>
