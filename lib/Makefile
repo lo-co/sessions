@@ -3,6 +3,7 @@ CFLAGS = -Wall -std=c++11 -fPIC
 LFLAGS = -shared
 
 BOOST_SYS = /usr/lib/x86_64-linux-gnu/libboost_system.so.1.58.0
+BOOST_FILE_SYS =  /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.58.0
 
 # program: 
 #	$(CC) 
@@ -12,7 +13,7 @@ main: libsession.so
 	${CC} ${CFLAGS} -I -L. ../test/test_main.cpp -o main libsession.so  ${BOOST_SYS}
 
 libsession.so: session.o file_session.o log_session.o
-	${CC} -o $@ session.o file_session.o log_session.o ${BOOST_SYS}  ${LFLAGS} 
+	${CC} -o $@ session.o file_session.o log_session.o ${BOOST_SYS} ${BOOST_FILE_SYS} ${LFLAGS} 
 	rm -rf *.o
 
 

@@ -62,6 +62,8 @@ namespace session {
             return this->ID;
         }
         
+        int get_nopen(){return nopen;};
+        
         Session();
 
         Session(sData initData);
